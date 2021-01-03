@@ -23,12 +23,4 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-
-
-
-
-
-unix|win32: LIBS += -L$$PWD/../../Qt_Test_Work/Qt_Library/lib/ -lQt_library
-
-INCLUDEPATH += $$PWD/../../Qt_Test_Work/Qt_Library/include
-DEPENDPATH += $$PWD/../../Qt_Test_Work/Qt_Library/include
+CONFIG +=C++11

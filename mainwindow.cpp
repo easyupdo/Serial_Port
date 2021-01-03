@@ -49,8 +49,11 @@ void MainWindow::writeToSerial()
     if(recAsciiOrHexControl == AsciiOrHex::ASCII)
     {
         QString string = "page set";
-        char over[] = {0xff,0xff,0xff};
-        QByteArray flag(over);
+//        const char over[] = {0xff,0xff,0xff};
+        QByteArray flag;
+        flag.append(0xff);
+        flag.append(0xff);
+        flag.append(0xff);
         QByteArray use = string.toLatin1()+flag;
         toHMI = use;
         qDebug()<<"USE:"<<use;
@@ -303,8 +306,11 @@ void MainWindow::writeToHMI_SetTime()
 //    writeToSerial();
 //    qDebug()<<QString::fromLocal8Bit("写入HMI:")<<toHMI;
     QString string = "n0.val=n0.val+1";
-    char over[] = {0xff,0xff,0xff};
-    QByteArray flag(over);
+//    char over[] = {0xff,0xff,0xff};
+    QByteArray flag;
+    flag.append(0xff);
+    flag.append(0xff);
+    flag.append(0xff);
     qDebug()<<"flag:"<<flag;
     QByteArray use;
     use.clear();
@@ -317,8 +323,11 @@ void MainWindow::writeToHMI_SetTime()
 void MainWindow::on_pushButton_3_clicked()
 {
     QString string = "page set";
-    char over[] = {0xff,0xff,0xff};
-    QByteArray flag(over);
+//    char over[] = {0xff,0xff,0xff};
+    QByteArray flag;
+    flag.append(0xff);
+    flag.append(0xff);
+    flag.append(0xff);
     QByteArray use;
     use.clear();
     use = string.toLatin1()+flag;

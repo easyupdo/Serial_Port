@@ -15,7 +15,7 @@
 #include <QDebug>
 #include <iostream>
 #include <stdlib.h>
-#include <malloc.h>
+//#include <malloc.h>
 #include <QQueue>
 #include <QMutexLocker>
 #include <QMutex>
